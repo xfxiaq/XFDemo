@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie ie9" lang="zh-CN" class="no-js"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="zh-CN" class="no-js">
+<!--<![endif]-->
+
+<head>
+<title>货运管理平台</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description"
+	content="KingAdmin - Bootstrap Admin Dashboard Theme">
+<meta name="author" content="The Develovers">
+<meta http-equiv="Cache-Control" content="private">
+<link href="assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+<!-- CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/css/main.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/css/select2-bootstrap.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/css/bootstrap-select.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+<link href="assets/js/plugins/datatable1.10.8/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+	<!-- alertify -->
+	<link rel="stylesheet" href="assets/js/plugins/alertify/alertify.css">
+	<link rel="stylesheet" href="assets/js/plugins/alertify/alertify.core.css">
+	<link rel="stylesheet" href="assets/js/plugins/alertify/alertify.default.css">
+	<link rel="stylesheet" href="assets/js/plugins/alertify/alertify.bootstrap.css">
+
+<!--[if lte IE 9]>
+	<link href="assets/css/main-ie.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="assets/css/main-ie-part2.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+
+
+<!-- Fav and touch icons -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/kingadmin-favicon144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/kingadmin-favicon114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/kingadmin-favicon72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57"
+	href="assets/ico/kingadmin-favicon57x57.png">
+<link rel="shortcut icon" href="assets/img/tran.png"> -->
+
+
+<style>
+
+/* .form-control[required],
+fieldset[required] .form-control {
+border-left: \#C00 2px solid; 
+} */
+[required]{
+border-left: \#C00 2px solid; 
+}
+
+.select2-required .select2-chosen{
+border-left: \#C00 2px solid; 
+}
+
+.menu_bg{
+	background-color: #FEFFFF !important;  
+}
+
+
+
+		a {
+			text-decoration: none;
+		}
+		[required] {
+			border-left: \#C00 2px solid;
+		}
+
+		.select2-required .select2-chosen {
+			border-left: \#C00 2px solid;
+		}
+		.top-bar
+				.logo {
+			top: 1px;
+		}
+
+		.top-bar {
+			background-color: #4690B8;
+		}
+		
+		ul.main-menu>li a {
+			background-color: #F1F2F3;
+			color: #5A5B5C;
+			text-decoration: none;
+			padding-left: 10px;
+			/* border-top: 1px solid #D4D4D4; */
+		}
+		a.menu_bg::before {
+		    background: #2E7EB9;
+		    border-radius: 100%;
+		    content: "";
+		    position: absolute;
+		    width: 0.6em;
+		    height: 0.6em;
+	        top: 14px;
+		    left: 2em;
+		    /* transform: skewX(-4deg); */
+		}
+		ul.main-menu > li.active > a {
+		    font-weight: 700;
+		    background-color: #FEFFFF;
+		    color: #2E7EB9;
+	        border-left: solid 2px;
+		}
+
+		ul.main-menu>li
+				a:hover {
+			background-color: #FEFFFF;
+		}
+
+		ul.sub-menu>li a {
+			background-color: #FEFFFF;
+			color: #555;
+			text-decoration: none;
+			padding-left: 55px;
+		}
+
+		ul.sub-menu>li a:hover {
+			background-color: #F6F6F6;
+			color: #5A5B5C;
+		}
+
+		ul.sub-menu>li a.menu_bg {
+			background-color: #F6F6F6;
+			color: #5A5B5C;
+		}
+
+		.footer {
+			background-color: rgba(117, 114, 114, 0.25);
+       }
+       .bottom .container .content-wrapper {
+		    background-color: #FFFFFF;
+		    border-left: 1px solid rgb(202, 201, 201);
+		    min-height: 500px;
+		}
+		.content-padding {
+			padding: 0px; 
+		}
+		.content-wrapper.expanded {
+		    width: 100%;
+	        padding: 0px 0px 0px 40px;
+		}
+		.left-sidebar.minified .main-menu > li:hover > ul.sub-menu > li > a {
+		    padding-left: 33px; 
+		}
+	.top-bar .notifications .count {
+	    position: absolute;
+	    top: -7px;
+	    left: 58%;
+	    padding: 0px 5px;
+	    border-radius: 30px;
+	    line-height: 16px;
+	    text-align: center;
+	    font-size: 10px;
+	    border-width: 2px;
+	    border-style: solid;
+	    color:  rgb(255, 255, 255);
+	    background: #e60404 !important;
+	    border-color: rgb(255, 255, 255);
+	}
+	
+	.widget {
+	    border-color: #FFFFFF;
+	    background-color: #FFFFFF;
+	}
+	
+	.widget .widget-header {
+	    border-bottom-color: #DAE8F0;
+	    background-color: #FFFFFF;
+	}
+	
+	.widget .widget-header .widget-header-toolbar {
+		height: 30px;
+	    border-left: 1px solid #DAE8F0;
+	}
+	
+	.widget .widget-header {
+	    background-color: #FFFFFF;
+	}
+	
+	.widget .widget-header h3 {
+	    line-height: 37px;
+	    color: #007FC3;
+	}
+	
+	.widget .widget-content {
+	    background-color: #FFFFFF;
+	    padding: 5px 5px;
+	}
+	
+	.table > thead > tr {
+	    background-color: #FFFFFF;
+	}
+	
+	.table>thead>tr>th {
+	    border-bottom: 1px solid #ddd;
+	}
+	
+	.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+	    background-color: #FFFFFF;
+	}
+	
+	.table-hover > tbody > tr:hover:nth-child(odd) > td, .table-hover > tbody > tr:hover:nth-child(odd) > th {
+	    background-color: #FFFEED;
+	}
+	
+	.table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>th, .table>caption+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>td, .table>thead:first-child>tr:first-child>td {
+	    border-top: 0;
+	    background-color: #F1F2F3;
+	}
+	
+	.green {
+		color: #87B882;
+	}
+	.red{
+	   color:red;
+	}
+	.btn-success {
+	    background-color: #87B882;
+	    border-color: #87B882;
+	}
+	
+	.btn-info {
+	    background-color: #70B5DF;
+	    border-color: #70B5DF;
+	}
+	
+	.btn-default {
+	    color: #333;
+	    background-color: #fff;
+	    border: solid 1px #ccc !important;
+        height: 34px;
+	}
+	
+	.btn-warning {
+	    background-color: #FBB75B;
+	    border-color:#FBB75B;
+	}
+	
+	.btn-danger {
+	    background-color: #CE5C4B;
+	    border-color:#CE5C4B;
+	}
+	
+	.dropdown-menu.open {
+	    border: 1px solid #5897fb !important;
+	}
+		
+	.fa-orange {
+		color: #FB8938;
+	}
+	
+	.input-sty {
+		border-radius: 4px;
+	    border: 1px solid #72B4DF;
+	    width: 200px;
+	    height: 23px;
+	    padding-left: 12px;
+	    margin-bottom: 3px;
+	}
+	
+	.input-sty:focus {
+	    outline: 1px auto -webkit-focus-ring-color;
+	    outline-offset: -3px;
+	}
+	
+	/* .input-select {
+		width: 200px;
+	    height: 23px;
+	} */
+	
+	.select2-container .select2-choices .select2-search-field input, .select2-container .select2-choice, .select2-container .select2-choices {
+	    border-color: #72B4DF;
+	}
+	
+	.rounded {
+		border-radius: 4px;
+	}
+	
+	.form-group {
+	    margin-bottom: 5px;
+	}
+	
+	fieldset {
+	    padding-left: 10px;
+	}
+	
+	.color-green {
+		color: #439643;
+	}
+	
+	.color-blue {
+		color: #4690B8;
+	}
+	
+	.color-yellow {
+		color: #FBB75B;
+	}
+	
+	.color-red {
+		color: #CE5C4B;
+	}
+	
+	.top-general-alert {
+	    padding: 10px 0;
+	    margin-bottom: 0;
+	    border: none;
+	    text-align: center;
+	    display: none;
+	    width: 83.3%;
+	    position: fixed;
+	    z-index: 100;
+	    text-align: center;
+	}
+	
+	/* .select2-container .select2-choices .select2-search-field input, .select2-container .select2-choice, .select2-container .select2-choices {
+	    height: 21px;
+	} */
+	
+ 	.select2-container-multi .select2-choices {
+	    min-height: 23px;
+	} 
+	
+	.select2-container-multi .select2-choices .select2-search-choice {
+   		padding: 0px 0px 0px 18px;
+    }	
+    
+    .input-mul-select {
+		min-width: 200px;
+		width: auto;
+	    height: 23px;
+	}
+	
+	.select2-container-multi .select2-choices .select2-search-choice {
+   		margin-top: 3px;
+	}
+	
+	.red-point-img {
+		width: 10px;
+	    margin-top: -8px;
+	}
+	
+	div.dataTables_wrapper div.dataTables_info {
+	    padding-top: 6px;
+	}
+	
+	div.dataTables_wrapper div.dataTables_length select {
+	    width: 45px;
+	}
+
+</style>
+
+
+</head>
+
+<body>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content" style="width: 800px;">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="_shipName">Modal title</h4>
+				</div>
+				<div class="modal-body" id="modal-body" style="width: 800px;">
+					<p>Modal dialog content...</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- WRAPPER -->
+	<div class="wrapper">
+
+		<!-- TOP BAR -->
+		<div class="top-bar">
+			<div class="container">
+
+
+
+				<div class="row">
+					<!-- logo -->
+					<div class="col-md-2 logo">
+						<a href="index.html"> <img   height="23"
+							src="assets/img/logo-02.png"
+							alt="物流可视化跟踪系统" />
+						</a>
+						<h1 class="sr-only">Trawind Admin Dashboard</h1>
+					</div>
+					<!-- end logo -->
+					<div class="col-md-10">
+						<div class="row">
+							<div class="col-md-3">
+								<!-- search box
+								<div id="tour-searchbox" class="input-group searchbox">
+									<input type="search" class="form-control"
+										placeholder="请录入关键信息..."> <span
+										class="input-group-btn">
+										<button class="btn btn-default" type="button">
+											<i class="fa fa-search"></i>
+										</button>
+									</span>
+								</div>
+								end search box -->
+							</div>
+							<div class="col-md-3">
+							
+							</div>
+							<div class="col-md-6">
+								<div class="top-bar-right">
+									<!-- responsive menu bar icon -->
+									<a href="#" class="hidden-md hidden-lg main-nav-toggle"><i
+										class="fa fa-bars"></i></a>
+									<!-- end responsive menu bar icon -->
+									<!-- <button type="button" id="start-tour" class="btn btn-link">
+										<i class="fa fa-refresh"></i> Start Tour
+									</button> -->
+									<!-- <button type="button" id="global-volume"
+										class="btn btn-link btn-global-volume">
+										<i class="fa"></i>
+									</button> -->
+									<div class="notifications">
+										<ul>
+
+											 
+											<li class="notification-item general">
+												<div class="btn-group">
+												
+													<ul class="dropdown-menu" role="menu" id="_notificationContent">
+
+
+													</ul>
+												</div>
+											</li>
+										
+										</ul>
+									</div>
+
+									<!-- logged user and the menu -->
+									<div class="logged-user main-menu">
+										<div class="btn-group">
+											<a href="#" class="btn btn-link dropdown-toggle"
+												data-toggle="dropdown"> <img src="" id="user-avatar"
+												alt="" width="25" height="25"/> <span class="name" id="_username"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+												<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu" role="menu">
+											<!-- 
+												<li><a href="#"> <i class="fa fa-user"></i> <span
+														class="text">简介</span>
+												</a></li>
+												 -->
+												<li><a href="javascript:void(0)" id="user_setting"  ><i class="fa fa-cog"></i> <span
+														class="text">设置 </span>
+												</a></li>
+												<li><a href="javascript:void(0)"  id="user_logout"> <i class="fa fa-power-off"></i> <span
+														class="text">退出</span>
+												</a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- end logged user and the menu -->
+								</div>
+								<!-- /top-bar-right -->
+							</div>
+						</div>
+						<!-- /row -->
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /top -->
+
+		<!-- BOTTOM: LEFT NAV AND RIGHT MAIN CONTENT -->
+		<div class="bottom">
+			<div class="container">
+
+
+				<div class="modal fade" id="myModal_x2" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content" style="width: 800px;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="_shipName">Modal title</h4>
+							</div>
+							<div class="modal-body" id="modal-body" style="width: 800px;">
+								<p>Modal dialog content...</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<!-- left sidebar -->
+					<div class="col-md-2 left-sidebar" id="left-sidebar"></div>
+
+					<!-- content-wrapper -->
+					<div class="col-md-10 content-wrapper content-padding" id="content-wrap">
+						<!-- top general alert -->
+						<div class="top-general-alert">
+							<span></span>
+							<button type="button" class="close">&times;</button>
+						</div>
+						<!-- main -->
+						<div class="content" id="content">
+
+							<!-- /main-content -->
+						</div>
+
+
+
+
+						<div class="modal fade" id="myModal_x1" tabindex="-1"
+							role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content" style="width: 800px;">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="_shipName">Modal title</h4>
+									</div>
+									<div class="modal-body" id="modal-body" style="width: 800px;">
+										<p>Modal dialog content...</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+
+
+						<!-- /main -->
+					</div>
+					<!-- /content-wrapper -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+
+		<!-- END BOTTOM: LEFT NAV AND RIGHT MAIN CONTENT -->
+		<div class="push-sticky-footer"></div>
+	</div>
+	<!-- /wrapper -->
+
+	<!-- FOOTER -->
+	<footer class="footer"> &copy; 杭州信生网络科技有限公司 </footer>
+	<!-- END FOOTER -->
+
+
+
+
+	<!-- Javascript -->
+
+	<script src="assets/js/jquery/jquery-2.1.0.js"></script>
+	<script src="assets/js/bootstrap/bootstrap.js"></script>
+	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=epwx4v8Qx7UNuFKoppdM5ZqCXF1h82LK"></script>
+  	<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>  
+
+	<script src="assets/js/plugins/modernizr/modernizr.js"></script>
+	<script src="assets/js/plugins/bootstrap-tour/bootstrap-tour.custom.js"></script>
+	<script src="assets/js/king-common.js"></script>
+
+	<script src="assets/js/plugins/datatable1.10.8/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="assets/js/plugins/datatable1.10.8/exts/dataTables.fixedColumns.min.js"></script>
+	<script
+		src="assets/js/plugins/datatable1.10.8/exts/dataTables.colVis.bootstrap.js"></script>
+	<script
+		src="assets/js/plugins/datatable1.10.8/exts/dataTables.colReorder.min.js"></script>
+	<script
+		src="assets/js/plugins/datatable1.10.8/exts/dataTables.tableTools.min.js"></script>
+	<script src="assets/js/plugins/datatable1.10.8/dataTables.bootstrap.js"></script>
+	
+	<script src="assets/js/plugins/moment/moment.min.js"></script> 
+		
+	<!-- jqgrid 使用 下方4个文件 -->
+	<link href="assets/js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="assets/js/plugins/jqgrid_new/css/ui.jqgrid-bootstarp.css" rel="stylesheet" type="text/css" media="screen">
+	<script src="assets/js/plugins/jqgrid_new/js/jquery.jqGrid.min.js"></script>
+	<script src="assets/js/plugins/jqgrid_new/js/i18n/grid.locale-cn.js"></script>
+
+
+	<script
+		src="assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+	<script src="assets/js/plugins/parsley-validation/parsley.cn.js"></script>
+	<script src="assets/js/king-table.js"></script>
+	<script src="assets/js/plugins/jstree/jstree.min.js"></script>
+	<script src="assets/js/jquery/jquery.cookie.js"></script>
+	<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+	<link href="assets/js/plugins/jstree/themes/default/style.min.css" rel="stylesheet" type="text/css" media="screen">
+
+	<script src="assets/js/plugins/alertify/alertify.js"></script>
+	<script data-main="assets/js/main.js"
+		src="assets/js/requireJs/require.js"></script>
+	<script src="assets/js/ajax.js"></script>
+	
+<script>
+	var cishu = 0;
+	if(cishu<24){
+		var req=self.setInterval("clock()",50*60*1000)
+	}
+	function clock()
+	    {
+			$.ajax({url:"/manage/common/login/keepSession",async:false});
+			cishu = cishu +1;
+		}
+</script>
+</body>
+
+</html>

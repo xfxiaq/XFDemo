@@ -1,0 +1,40 @@
+										<!-- ADVANCED VALIDATION -->
+										<div class="widget">
+											<div class="widget-header">
+												<h3><i class="fa fa-check-circle"></i> 新建角色</h3>
+											</div>
+											<div class="widget-content">
+												<form id="advanced-form" class="form-horizontal" data-parsley-validate >
+														<fieldset>
+															<div class="form-group">
+																<label for="roleCode" class="col-sm-2 control-label">角色代码</label>
+																<div class="col-sm-5">
+																		<input type="text"  class="form-control"  id="roleCode"   data-bind="value: roleCode"  
+																		required data-parsley-required-message="角色代码不可为空"
+																		data-parsley-minlength="2"  
+																		data-parsley-minlength-message="角色代码位数不可少于2位" 																		
+																		></input>
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="roleName" class="col-sm-2 control-label">角色名称</label>
+																<div class="col-sm-5">
+																	<input type="text" id="roleName" class="form-control" data-bind="value: roleName"  
+																	required data-parsley-required-message="角色名称不可为空"
+																	data-parsley-minlength="2"  
+																	data-parsley-minlength-message="角色代码位数不可少于2位" 
+																		 />
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+													
+													</fieldset>
+
+													<button type="button" class="btn btn-primary"  data-bind="click:_createEvent"  >保存</button>
+													<button type="button"  class="btn btn-primary" data-bind="click:_returnEvent" >返回</button>
+												</form>
+											</div>
+										</div>
