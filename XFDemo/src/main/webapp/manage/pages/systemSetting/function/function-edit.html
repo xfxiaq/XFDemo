@@ -1,0 +1,79 @@
+										<!-- ADVANCED VALIDATION -->
+										<div class="widget">
+											<div class="widget-header">
+												<h3><i class="fa fa-check-circle"></i> 修改功能权限</h3>
+											</div>
+											<div class="widget-content">
+												<form id="advanced-form" class="form-horizontal" data-parsley-validate >
+														<fieldset>
+															<div class="form-group">
+																<label for="functionName" class="col-sm-2 control-label">名称</label>
+																<div class="col-sm-5">
+																		<input type="text"  class="form-control"  id="functionName"   data-bind="value: functionName"  
+																		required data-parsley-required-message="名称不可为空"
+																		data-parsley-minlength="2"  
+																		data-parsley-minlength-message="名称位数不可少于2位" 																		
+																		></input>
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="functionUrl" class="col-sm-2 control-label">功能菜单路径</label>
+																<div class="col-sm-5">
+																	<input type="text" id="functionUrl" class="form-control" data-bind="value: functionUrl"  />
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="urlRouter" class="col-sm-2 control-label">路由地址</label>
+																<div class="col-sm-5">
+																	<input type="text" id="urlRouter" class="form-control" data-bind="value: urlRouter" />
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="authUrl" class="col-sm-2 control-label">权限地址</label>
+																<div class="col-sm-5">
+																	<input type="text" id="authUrl" class="form-control" data-bind="value: authUrl" 
+																	
+																	/>
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="ico" class="col-sm-2 control-label">图标</label>
+																<div class="col-sm-5">
+																	<input type="text" id="ico" class="form-control" data-bind="value: ico" 
+																	
+																	/>
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="parentId" class="col-sm-2 control-label">父菜单</label>
+																<div class="col-sm-5">
+																	<input type="text" id="parentId" class="form-control" data-bind="value: parentId" />
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="sort" class="col-sm-2 control-label">排序</label>
+																<div class="col-sm-5">
+																	<input type="text" id="sort" class="form-control" data-bind="value: sort" />
+																</div>
+																<div class="col-sm-5">
+																</div>
+															</div>
+														</fieldset>
+
+													<button type="button" class="btn btn-primary"  data-bind="click:_createEvent"  >保存</button>
+													<button type="button"  class="btn btn-primary" data-bind="click:_returnEvent" >返回</button>
+												</form>
+											</div>
+										</div>
